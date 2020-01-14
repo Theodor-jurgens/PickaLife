@@ -1,0 +1,10 @@
+<div><%= @user.email %></div>
+<%= simple_form_for @user do |f|%>
+  <%= f.input :email %>
+  <%= f.submit "Edit", class: "btn btn-primary" %>
+<% end %>
+
+<%= simple_form_for @user, :url => user_path(@user), :method => :delete do |f|%>
+  <%= f.submit "Destroy", class: "btn btn-primary" %>
+<% end %>
+

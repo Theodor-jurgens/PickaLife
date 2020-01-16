@@ -1,0 +1,9 @@
+<div>
+  <% @bookings.each do |b| %>
+    <div><%= b.user.email %></div>
+    <%= simple_form_for b, :url => booking_path(b), :method => :delete do |f|%>
+      <%= f.submit "Destroy", class: "btn btn-primary" %>
+    <% end %>
+  <% end %>
+</div>
+

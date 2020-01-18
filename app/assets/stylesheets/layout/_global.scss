@@ -3,7 +3,7 @@
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;
-  font-family: $font-regular;
+  font-family: $font-regular, sans-serif;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   padding: 0;

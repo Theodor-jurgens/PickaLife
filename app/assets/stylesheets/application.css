@@ -22,5 +22,5 @@
 @import "layout/layout";
 @import "components/navbar";
 @import "components/banner";
-
+@import "components/button"
 @import "layout/typography";

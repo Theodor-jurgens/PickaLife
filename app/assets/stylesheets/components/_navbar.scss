@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar{
+  @include border-shadow;
+  &__logo{
+    color: $secondary-color;
+  }
+}
+=======
+>>>>>>> 4485ff065acc431dcef3b99427d971d3ad8149ce

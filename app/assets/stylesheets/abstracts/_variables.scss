@@ -1,0 +1,63 @@
+// Container
+$container: 1200px;
+// Value for padding col- and row
+$gutter-size: 32px;
+
+//Fonts
+$font-regular : 'Yanone Kaffeesatz';
+
+// Font Sizes
+$base-font-size: 16px;
+
+// Line height
+$base-line-height: normal;
+$heading-line-height: normal;
+
+//Colors
+$gold:                      #EFAD1E;
+$red:                       #ff483b;
+$light-pink:                #ffeae4;
+$purple:                    #5609F4;
+$blue:                      #174EF3;
+$medium-blue:               #D1DCFB;
+$light-blue:                #e7edfd;
+$white-blue:                #F3F6FE;
+$turquoise:                 #00ccbc;
+$green:                     #13B686;
+$white:                     #ffffff;
+$white-2:                   #f2f2f2;
+$light-grey:                #d2d3d7;
+$grey:                      #9b9eaa;
+$dark-grey:                 #686e80;
+$black:                     #2d3333;
+$orange:                    #ff0000;
+
+$body-bg-color:             $white;
+$container-bg-color:        $white-2;
+$text-color:                $black;
+$soft-text-color:           $light-grey;
+$primary-color:             $white;
+$secondary-color:           $orange;
+$light-color:               $light-blue;
+$valid-color:               $green;
+$invalid-color:             $red;
+$warning-color:             $gold;
+$border-color:              $grey;
+$caption-color:             $grey;
+$calendar-text-color:       $grey;
+$disabled-color:            $light-grey;
+$inactive-color:            $white-2;
+
+//Breakpoint
+$tablet-medium: 768px;
+$tablet-large: 992px;
+$desktop-small: 1024px;
+$desktop-medium: 1260px;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: (
+25: 25%,
+50: 50%,
+75: 75%,
+100: 100%
+)

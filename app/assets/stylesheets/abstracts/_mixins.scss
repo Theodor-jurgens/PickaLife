@@ -1,0 +1,36 @@
+/* Clearfix
+----------------------------------------------------------------------------------------------------*/
+@mixin clearfix() {
+ &:after {
+  content: "";
+  display: block;
+  clear: both;
+ }
+}
+
+@mixin typography($font-size: $base-font-size, $line-height: 1, $font-weight: normal, $color: $text-color){
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin padding-horizontal($padding: $gutter-size) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin padding-vertical($padding: $gutter-size) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin margin-horizontal($margin: $gutter-size) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin margin-vertical($margin: $gutter-size) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}

@@ -34,3 +34,7 @@
   margin-top: $margin;
   margin-bottom: $margin;
 }
+
+@mixin border-shadow($x:0, $y:0, $z:15px, $color: rgba(0,0,0,0.2)) {
+  box-shadow: $x $y $z $color;
+}

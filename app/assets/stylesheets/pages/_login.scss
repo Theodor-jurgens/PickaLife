@@ -1,0 +1,39 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.login{
+  @include border-shadow;
+  @include padding-horizontal;
+  @include padding-vertical;
+  @include margin-vertical($gutter-size * 2);
+  background: $primary-color;
+  border-radius: 5px;
+  &__title{
+    color: $secondary-color;
+    text-align: center;
+  }
+  &__form{
+    color: $secondary-color;
+  }
+
+  a{
+    color: $soft-text-color;
+    text-decoration: none;
+    margin-right: $gutter-size / 4;
+    @include padding-vertical;
+    &:hover{
+      color: $text-color;
+    }
+  }
+
+  &__btn{
+    margin-bottom: $gutter-size / 2;
+    width: 100%;
+    background: $secondary-color;
+    border-radius: 3px;
+    padding: $gutter-size / 4;
+    &.btn{
+      color: $white;
+    }
+  }
+}

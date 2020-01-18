@@ -13,15 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap/scss/bootstrap";
 @import "abstracts/variables";
 @import "abstracts/font";
 @import "abstracts/mixins";
-@import "abstracts/utils";
 
 @import "layout/global";
-@import "layout/layout";
 @import "components/navbar";
 @import "components/banner";
-
+@import "components/button";
 @import "layout/typography";
 @import "bootstrap/scss/bootstrap";
+@import "pages/login";

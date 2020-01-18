@@ -1,0 +1,13 @@
+$alignments: right, center, left;
+@each $alignment in $alignments{
+  .--text-#{$alignment} {
+    text-align: $alignment;
+  }
+}
+
+$displays: flex, block, inline;
+@each $display in $displays{
+  .--display-#{$display} {
+    display: $display !important;
+  }
+}

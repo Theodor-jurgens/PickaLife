@@ -3,38 +3,21 @@
 
 .banner {
   background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  height: 80vh;
-
-  &__btn{
-    color: $primary-color;
-    background: $secondary-color;
-    border-radius: 3px;
-    text-decoration: none;
-    @include padding-horizontal($gutter-size/2);
-    @include padding-vertical($gutter-size/4);
-    &:hover{
-      text-decoration: none;
-      color: $secondary-color ;
-      background: $primary-color;
-    }
+  background-position: right;
+  padding: 0;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  &__title{
+    margin: 0;
+    color: $white;
+    font-size: $main-title-font-size;
+    font-weight: bold;
   }
-}
 
-.banner h1 {
-  margin: 0;
-  color: $white;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.secondary-color{
-  color: $secondary-color;
+  &__text{
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
 }

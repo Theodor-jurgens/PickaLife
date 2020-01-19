@@ -1,9 +1,10 @@
 @import "../abstracts/variables";
+@import "../abstracts/font";
 
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;
-  font-family: $font-regular, sans-serif;
+  font-family: $font-regular, sans-serif !important;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   padding: 0;

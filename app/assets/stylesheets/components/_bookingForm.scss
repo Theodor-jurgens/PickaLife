@@ -1,0 +1,14 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.bookingForm{
+  &__title{
+    color: $text-color;
+  }
+  &__form{
+    background: $transparent-bg-color;
+    @include border-shadow;
+    @include padding-horizontal;
+    @include padding-vertical;
+  }
+}

@@ -1,0 +1,49 @@
+<!-- <div class="card">
+  <div class="card__categoy"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://66.media.tumblr.com/35b4f60d7fdb30d6fc0abd9fbbb80e78/tumblr_mu8zy2vsaK1rrsl5ho1_640.jpg)">
+    <%= experience.activity %>
+  </div>
+  <div class="card__attributes">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item card__item">
+        <div>Place:</div>
+        <div><%= experience.place %></div>
+      <li class="list-group-item card__item">
+        <div>Start date:</div>
+        <div><%= experience.start_date.strftime("%m/%d/%Y") %></div>
+      </li>
+      <li class="list-group-item card__item">
+        <div>End date:</div>
+        <div><%= experience.end_date.strftime("%m/%d/%Y") %></div>
+      </li>
+      <li class="list-group-item card__item">
+        <div>Price:</div>
+        <div><%= experience.price %>,00€</div>
+      </li>
+    </ul>
+  </div>
+  <%= link_to "Book now", new_user_session_path, class: "button-primary card__btn" %>
+</div> -->
+
+<div class="card">
+  <div class="card__img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://66.media.tumblr.com/35b4f60d7fdb30d6fc0abd9fbbb80e78/tumblr_mu8zy2vsaK1rrsl5ho1_640.jpg)">
+    <div class="card__title">
+      <%= experience.activity.upcase %>
+    </div>
+  </div>
+  <div class="card__place">
+    <%= experience.place.upcase %>
+  </div>
+  <div class="card__activity">
+    <%= experience.activity %>
+  </div>
+  <div class="card__price">
+    <%= experience.price %>,00€
+  </div>
+  <div class="card__rating">
+    <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
+    4.9<span class="soft-text">(293)</span>
+  </div>
+  <div>
+    <%= link_to "Book now", new_user_session_path, class: "button-primary card__btn" %>
+  </div>
+</div>

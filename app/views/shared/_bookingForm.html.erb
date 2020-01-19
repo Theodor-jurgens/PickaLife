@@ -1,0 +1,24 @@
+<div class="bookingForm">
+  <%= simple_form_for experience, html: { class: "bookingForm__form"} do |f| %>
+  <h2 class="bookingForm__title">Find the experience that fulfills your <span class="secondary-color">dreams.</span></h2>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-6">
+        <div class="bookingForm__column">
+          <%= f.input :activity %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="bookingForm__column">
+          <%= f.input :place %>
+          <%= f.input :activity %>
+          <%= f.input :price %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit :class => 'button-primary' %>
+  </div>
+  <% end %>
+</div>

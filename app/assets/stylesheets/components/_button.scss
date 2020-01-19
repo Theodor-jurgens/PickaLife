@@ -1,34 +1,49 @@
+// .button-primary {
+//   box-shadow:inset 0px 0px 0px 0px;
+//   background-color: #ec5334;
+//   border-radius:4px;
+//   border:0px solid #ffaa22;
+//   display:inline-block;
+//   cursor:pointer;
+//   color: #001835;
+//   font-family: 'Oswald';
+//   font-size:12px;
+//   font-weight:bold;
+//   padding:6px 24px;
+//   text-decoration:none;
+//   text-shadow:0px 01x 0px;
+// }
 
-.button-primary {
-  box-shadow:inset 0px 0px 0px 0px;
-  background-color: #ec5334;
-  border-radius:4px;
-  border:0px solid #ffaa22;
-  display:inline-block;
-  cursor:pointer;
-  color: #001835;
-  font-family: 'Oswald';
-  font-size:12px;
-  font-weight:bold;
-  padding:6px 24px;
-  text-decoration:none;
-  text-shadow:0px 01x 0px;
-}
+// .button-secondary{
+//   box-shadow:inset 0px 0px 0px 0px;
+//   background-color: #001835;
+//   border-radius:4px;
+//   border:0px solid #ffaa22;
+//   display:inline-block;
+//   cursor:pointer;
+//   color: #ec5334;
+//   font-family: 'Oswald';
+//   font-size:12px;
+//   font-weight:bold;
+//   padding:6px 24px;
+//   text-decoration:none;
+//   text-shadow:0px 01x 0px;
+// }
 
-.button-secondary{
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
 
-  box-shadow:inset 0px 0px 0px 0px;
-  background-color: #001835;
-  border-radius:4px;
-  border:0px solid #ffaa22;
-  display:inline-block;
-  cursor:pointer;
-  color: #ec5334;
-  font-family: 'Oswald';
-  font-size:12px;
-  font-weight:bold;
-  padding:6px 24px;
-  text-decoration:none;
-  text-shadow:0px 01x 0px;
-
+.button-primary{
+  color: $primary-color;
+  background: $secondary-color;
+  border-radius: 3px;
+  text-decoration: none;
+  @include padding-horizontal($gutter-size/2);
+  @include padding-vertical($gutter-size/4);
+  transition: all .5s ease-out;
+  &:hover{
+    text-decoration: none;
+    color: $secondary-color ;
+    background: $primary-color;
+  }
 }

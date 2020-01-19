@@ -5,10 +5,15 @@ $gutter-size: 32px;
 
 //Fonts
 $font-regular : 'Oswald';
-
+$font-secondary : 'Anton';
 
 // Font Sizes
 $base-font-size: 16px;
+$navbar-font-size: 16px;
+$logo-font-size: 20px;
+$main-title-font-size: 32px;
+$title-font-size: 24px;
+$subtitle-font-size: 20px;
 
 // Line height
 $base-line-height: normal;
@@ -26,7 +31,7 @@ $white-blue:                #F3F6FE;
 $turquoise:                 #00ccbc;
 $green:                     #13B686;
 $white:                     #ffffff;
-$white-2:                   #f2f2f2;
+$white-2:                   rgba(242, 242, 242, 0.95);
 $light-grey:                #d2d3d7;
 $grey:                      #9b9eaa;
 $dark-grey:                 #686e80;
@@ -34,7 +39,7 @@ $black:                     #001835;
 $orange:                    #ec5334;
 
 $body-bg-color:             $white;
-$container-bg-color:        $white-2;
+$transparent-bg-color:      $white-2;
 $text-color:                $black;
 $soft-text-color:           $light-grey;
 $primary-color:             $white;
@@ -44,10 +49,7 @@ $valid-color:               $green;
 $invalid-color:             $red;
 $warning-color:             $gold;
 $border-color:              $grey;
-$caption-color:             $grey;
-$calendar-text-color:       $grey;
 $disabled-color:            $light-grey;
-$inactive-color:            $white-2;
 
 //Breakpoint
 $tablet-medium: 768px;

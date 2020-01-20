@@ -1,9 +1,10 @@
 @import "../abstracts/variables";
+@import "../abstracts/font";
 
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;
-  font-family: $font-regular, sans-serif;
+  font-family: $font-regular, sans-serif !important;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   padding: 0;
@@ -15,6 +16,10 @@ a {
   color: $primary-color;
   text-decoration: none;
   transition: all .2s ease-in-out;
+  &:hover{
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 img {

@@ -1,0 +1,25 @@
+<div class="homeForm ">
+  <%= simple_form_for experience, html: { class: "homeForm__form"} do |f| %>
+  <h2 class="homeForm__title">Share your life experiences and make people's dreams come <span class="secondary-color">true.</span></h2>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-6">
+        <div class="homeForm__column">
+          <%= f.input :activity %>
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_date, as: :date, html5: true %>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="homeForm__column">
+          <%= f.input :description, :input_html => {:rows => 1} %>
+          <%= f.input :price %>
+          <%= f.label :photo, 'Photo' %>
+          <%= f.file_field :photo, class: 'homeForm__upload' %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit :class => 'button-primary homeForm__btn' %>
+  </div>
+  <% end %>
+</div>

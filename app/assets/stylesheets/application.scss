@@ -13,16 +13,25 @@
  *= require_tree .
  *= require_self
  */
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap/scss/bootstrap";
 @import "abstracts/variables";
 @import "abstracts/font";
 @import "abstracts/mixins";
 
 @import "layout/global";
+@import "layout/typography";
+
 @import "components/navbar";
+@import "components/footer";
 @import "components/banner";
 @import "components/button";
-@import "layout/typography";
-@import "bootstrap/scss/bootstrap";
+@import "components/card";
+@import "components/homeForm";
+
 @import "pages/login";
+@import "pages/home";
+@import "bootstrap-datepicker";
+
+// @import 'datepicker';

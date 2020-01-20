@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card__img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random/400x500)">
+    <%= link_to experience.activity.upcase, experience_path(experience), class: "card__title" %>
+  </div>
+  <div class="card__attributes">
+    <div class="card__place">
+      <%= experience.place.upcase %>
+    </div>
+    <div class="card__activity">
+      <%= experience.activity %>
+    </div>
+    <div class="card__price">
+      <%= experience.price %>,00€
+    </div>
+    <div class="card__rating">
+      <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
+      4.9<span class="soft-text">(293)</span>
+    </div>
+  </div>
+  <%= link_to "Book now", new_user_session_path, class: "card__cta" %>
+</div>

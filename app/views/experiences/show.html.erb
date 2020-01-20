@@ -1,1 +1,42 @@
-<%# <%= render 'shared/card' %> %>
+
+<div class="row">
+
+  <div class="">
+
+    <%= image_tag @experience.photo.url(:experience_show), class: "experience-show" %>
+
+  </div>
+
+  <div class="">
+
+        <div class="card__title">
+          <%= @experience.activity.upcase %>
+        </div>
+
+      <div class="card__place">
+        <%= @experience.place.upcase %>
+      </div>
+      <div class="card__activity">
+        <%= @experience.activity %>
+      </div>
+      <div class="card__price">
+        <%= @experience.price %>,00€
+      </div>
+      <div class="card__rating">
+        <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
+        4.9<span class="soft-text">(293)</span>
+      </div>
+  </div>
+
+
+</div>
+
+<div class="links btn-group">
+
+     <%= link_to "Back", root_path, class: "btn button-primary" %>
+      <%= link_to "Edit", edit_experience_path(@experience), class: "btn button-primary" %>
+      <%= link_to "Delete", experience_path(@experience), method: :delete, data: { confirm: "Are you sure?" }, class: "btn button-primary" %>
+
+
+</div>
+

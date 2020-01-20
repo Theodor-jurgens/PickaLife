@@ -1,5 +1,6 @@
 
 <%= simple_form_for @experience do |f|%>
+  <%= f.file_field :photo %>
   <%= f.input :activity %>
   <%= f.input :place %>
   <%= f.submit "Update", class: "btn btn-primary" %>

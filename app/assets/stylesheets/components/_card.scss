@@ -32,20 +32,20 @@
     font-weight: 400;
   }
   &__rating{
-    margin-bottom: $gutter-size;
+    margin-bottom: $gutter-size/2;
     font-weight: 400;
   }
   &__icon{
     margin-right: $gutter-size/8;
     font-weight: 400;
   }
-  &__btn{
-    border-radius: 3px;
-    transition: all .15s ease;
-    text-align: center;
+  &__cta{
+    text-decoration: none;
+    color: $secondary-color;
     &:hover{
-      background: $primary-color;
       color: $secondary-color;
+      text-decoration: none;
+      opacity: 0.75;
     }
   }
 }

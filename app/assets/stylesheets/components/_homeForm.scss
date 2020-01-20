@@ -1,7 +1,7 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
-.bookingForm{
+.homeForm{
   &__title{
     color: $text-color;
   }
@@ -10,5 +10,8 @@
     @include border-shadow;
     @include padding-horizontal;
     @include padding-vertical;
+  }
+  &__btn{
+    width: 100%;
   }
 }

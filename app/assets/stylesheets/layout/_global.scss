@@ -16,6 +16,10 @@ a {
   color: $primary-color;
   text-decoration: none;
   transition: all .2s ease-in-out;
+  &:hover{
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 img {

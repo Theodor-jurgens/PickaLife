@@ -1,18 +1,16 @@
-<div class="banner"style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://d19m59y37dris4.cloudfront.net/directory/1-4/img/photo/photo-1501621965065-c6e1cf6b53e2.jpg);">
+<div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://d19m59y37dris4.cloudfront.net/directory/1-4/img/photo/photo-1501621965065-c6e1cf6b53e2.jpg);">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-5 offset-sm-1">
+      <div class="col-xs-12 col-sm-6 offset-sm-1">
         <%= render 'shared/homeForm', experience: @experience %>
       </div>
     </div>
   </div>
 </div>
 <div class="wrapper">
-  <div class="container">
-    <div class="mt-5">
-      <h2 class="home__title">Latests experiences</h2>
-      <h4 class="home__subtitle">The best life experiences you can find, <span class="secondary-color">worldwide.</span></h4>
-    </div>
+  <div class="container mb-5">
+    <h2 class="home__title">Latests experiences</h2>
+    <h4 class="home__subtitle">The best life experiences you can find, <span class="secondary-color">worldwide.</span></h4>
     <div class="row my-4">
       <% @experiences[0..3].each do |experience| %>
       <div class="col-xs-6 col-sm-3 my-2">
@@ -20,8 +18,27 @@
       </div>
       <% end %>
     </div>
-    <div>
-      <%= link_to "Discover all experiences >>", experiences_path, class: "home__cta" %>
+    <%= link_to "Discover all experiences >>", experiences_path, class: "home__cta" %>
+  </div>
+  <div class="container mb-5">
+    <h2 class="home__title">Live your dreams</h2>
+    <h4 class="home__subtitle">Travel to the other part of the world in just a few <span class="secondary-color">clicks.</span></h4>
+    <div class="row">
+      <div class="col-12">
+        <%= render 'shared/searchBanner' %>
+      </div>
     </div>
+  </div>
+  <div class="container mb-5">
+    <h2 class="home__title">Top-rated experiences</h2>
+    <h4 class="home__subtitle">The best you can live <span class="secondary-color">out there.</span></h4>
+    <div class="row my-4">
+      <% @experiences[0..3].each do |experience| %>
+      <div class="col-xs-4 col-sm-3 my-2">
+        <%= render 'shared/card', experience: experience %>
+      </div>
+      <% end %>
+    </div>
+    <%= link_to "See all life experiences (2003) >>", experiences_path, class: "home__cta" %>
   </div>
 </div>

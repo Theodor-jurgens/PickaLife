@@ -17,6 +17,7 @@
           <%= f.input :price %>
           <%= f.label :photo, 'Photo' %>
           <%= f.file_field :photo, class: 'homeForm__upload' %>
+          <%= f.association :user, :as => :hidden, :input_html => { :value => current_user.id }  %>
         </div>
       </div>
     </div>

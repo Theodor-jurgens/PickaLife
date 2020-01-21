@@ -2,7 +2,7 @@
 
 <% @experiences.each do |experience| %>
 <div class="card col-md-3">
-  <div class="card__img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random/400x500)">
+  <div class="card__img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
     <div class="card__title">
       <%= experience.activity %>
     </div>
@@ -12,6 +12,9 @@
   </div>
   <div class="card__activity">
     <%= experience.activity %>
+    <%= experience.start_date  %>
+    <%= experience.end_date  %>
+    <%= experience.description %>
   </div>
   <div class="card__price">
     <%= experience.price %>,00€

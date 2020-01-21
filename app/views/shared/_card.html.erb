@@ -1,6 +1,6 @@
 <div class="card">
  <div class="row">
-  <div class="">
+  <div class="card_img">
     <%= link_to experience_path(experience) do %>
       <%= cl_image_tag experience.photo, height: 300, width: 400, crop: :fill %>
     <% end %>
@@ -17,13 +17,16 @@
         <%= experience.place %>
       </div>
       <div class="card__activity">
-        <%= experience.activity %>
       </div>
       <div class="card__price">
         <%= experience.price %>,00€
       </div>
       <div class="card__description">
           <%= experience.description %>
+        </div>
+        <div class="card__date">
+          <%= experience.start_date %>
+          <%= experience.end_date %>
         </div>
       <div class="card__rating">
         <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
@@ -34,4 +37,5 @@
 
 </div>
   <%= link_to "Book now", new_experience_booking_path(experience), class: "card__cta" %>
+  <%= link_to "Manage my bookings", experience_bookings_path(experience), class: "card__cta" %>
 </div>

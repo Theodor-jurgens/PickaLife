@@ -15,8 +15,8 @@
         <div class="homeForm__column">
           <%= f.input :description, :input_html => {:rows => 1} %>
           <%= f.input :price %>
-          <%= f.label :photo, 'Photo' %>
-          <%= f.file_field :photo, class: 'homeForm__upload' %>
+          <%= f.input :photo%>
+          <%= f.input :photo_cache, as: :hidden %>
           <%= f.association :user, :as => :hidden, :input_html => { :value => current_user.id }  %>
         </div>
       </div>

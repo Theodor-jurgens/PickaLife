@@ -12,7 +12,7 @@
     <h2 class="home__title">Latests experiences</h2>
     <h4 class="home__subtitle">The best life experiences you can find, <span class="secondary-color">worldwide.</span></h4>
     <div class="row my-4">
-      <% @experiences[0..3].each do |experience| %>
+      <% @experiences.each do |experience| %>
       <div class="col-xs-6 col-sm-3 my-2">
         <%= render 'shared/card', experience: experience %>
       </div>
@@ -33,7 +33,7 @@
     <h2 class="home__title">Top-rated experiences</h2>
     <h4 class="home__subtitle">The best you can live <span class="secondary-color">out there.</span></h4>
     <div class="row my-4">
-      <% @experiences[0..3].each do |experience| %>
+      <% @experiences.each do |experience| %>
       <div class="col-xs-4 col-sm-3 my-2">
         <%= render 'shared/card', experience: experience %>
       </div>

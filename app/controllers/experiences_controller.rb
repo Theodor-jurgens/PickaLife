@@ -8,7 +8,8 @@ class ExperiencesController < ApplicationController
   end
 
   def create
-    @experience = Experience.create(experience_params)
+    @experience = Experience.new(experience_params)
+    @experience.save
     redirect_to '/experiences'
   end
 
@@ -33,6 +34,6 @@ class ExperiencesController < ApplicationController
   private
 
   def experience_params
-    params.require(:experience).permit(:activity,:place, :start_date, :end_date, :price, :photo)
+    params.require(:experience).permit(:activity, :place, :start_date, :end_date, :photo, :price, :description,:user_id)
   end
 end

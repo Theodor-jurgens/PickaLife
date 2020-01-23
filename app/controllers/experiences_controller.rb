@@ -1,6 +1,14 @@
 class ExperiencesController < ApplicationController
   def index
-    @experiences = Experience.all
+    @experiences = Experience.geocoded
+    @markers = @experiences.map do |experience|
+      {
+        lat: experience.latitude,
+        lng: experience.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { experience: experience}),
+        
+      }
+    end
   end
 
   def show
@@ -34,6 +42,8 @@ class ExperiencesController < ApplicationController
   private
 
   def experience_params
-    params.require(:experience).permit(:activity, :place, :start_date, :end_date, :photo, :price, :description,:user_id)
+    params.require(:experience).permit(:activity, :place, :start_date,
+                                       :end_date, :photo, :price,
+                                       :description, :user_id)
   end
 end

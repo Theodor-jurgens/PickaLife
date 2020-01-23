@@ -1,0 +1,5 @@
+<%= simple_form_for([experience, Booking.new]) do |f| %>
+   <%= link_to"Create", experience_bookings_path(experience),  data: { confirm: "Do you confirm?"}, class: "card__cta" %>
+<% end %>
+
+

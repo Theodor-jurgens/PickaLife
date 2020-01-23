@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @experience = Experience.find(params[:experience_id])
     @user = @experience.user
+
   end
 
   def create

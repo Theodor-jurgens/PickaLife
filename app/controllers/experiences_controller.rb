@@ -1,6 +1,14 @@
 class ExperiencesController < ApplicationController
   def index
-    @experiences = Experience.all
+    if params[:query].present?
+      sql_query = " \
+        activity @@ :query \
+        OR place @@ :query \
+      "
+      @experiences = Experience.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @experiences = Experience.all
+    end
   end
 
   def show

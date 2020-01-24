@@ -13,6 +13,15 @@ class ExperiencesController < ApplicationController
 
   def show
     @experience = Experience.find(params[:id])
+    @experiences = Experience.all
+    @experiences = Experience.geocoded
+
+    @markers = @experiences.map do |experience|
+      {
+        lat: experience.latitude,
+        lng: experience.longitude
+      }
+    end
   end
 
   def create

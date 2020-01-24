@@ -1,0 +1,47 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.experience{
+  display: flex;
+  justify-content: space-between;
+  &__back{
+    color: $text-color;
+  }
+  &__setting{
+    color: $text-color;
+    &:hover{
+      color: $secondary-color;
+    }
+  }
+  &__description{
+    @include typography($font-size: $base-font-size, $color: $text-color, $font-weight: 300);
+    margin-bottom: $gutter-size;
+  }
+  &__host{
+    @include padding-vertical;
+    @include padding-horizontal;
+    background: $transparent-bg-color;
+    display: flex;
+    &__photo{
+      display: flex;
+      vertical-align: middle;
+      align-items: flex-start;
+    }
+    &__avatar{
+      border-radius: $border-radius;
+      @include border-shadow;
+      width: 70px;
+      height: 70px;
+      background-size: cover;
+      background-position: center;
+      margin-right: $gutter-size * 0.5;
+    }
+    &__name{
+      @include typography($font-size: $subtitle-font-size, $color: $text-color)
+    }
+    &__place{
+      @include typography($font-size: $base-font-size, $color: $text-color, $font-weight: 300);
+      margin-bottom: $gutter-size;
+    }
+  }
+}

@@ -27,6 +27,7 @@
     @include margin-horizontal($gutter-size/4);
     .fa-heart{
       color: $secondary-color;
+      margin-right: $gutter-size * 0.25 !important;
     }
   }
   &__text{

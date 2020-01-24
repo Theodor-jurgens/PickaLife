@@ -7,7 +7,7 @@
   @include padding-vertical;
   @include margin-vertical($gutter-size * 2);
   background: $primary-color;
-  border-radius: 5px;
+  border-radius: $border-radius;
   &__title{
     color: $secondary-color;
     text-align: center;
@@ -30,7 +30,7 @@
     margin-bottom: $gutter-size / 2;
     width: 100%;
     background: $secondary-color;
-    border-radius: 3px;
+    border-radius: $border-radius;
     padding: $gutter-size / 4;
     &.btn{
       color: $white;

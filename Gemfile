@@ -12,7 +12,6 @@ gem 'bootstrap-datepicker-rails', '~> 1.8', '>= 1.8.0.1'
 # gem 'paperclip', '~> 6.1'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
-gem 'carrierwave', '~> 2.0', '>= 2.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record

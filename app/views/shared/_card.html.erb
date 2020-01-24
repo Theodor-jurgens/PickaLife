@@ -9,6 +9,9 @@
   <div class="card__info">
     <div class="card__place">
       <%= experience.place %>
+      <div class="card__date">
+        <%= experience.start_date.strftime("on %a. %d of %B") %>
+      </div>
     </div>
     <div class="card__price">
       <%= experience.price %>,00€
@@ -16,15 +19,9 @@
     <div class="card__description">
       <%= experience.description %>
     </div>
-    <div class="card__date">
-      <%= experience.start_date %>
-    </div>
-    <div class="card__date">
-      <%= experience.end_date %>
-    </div>
     <div class="card__rating">
       <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
-      4.9<span class="soft-text">(293)</span>
+      4.9<span class="soft-text"> (293)</span>
     </div>
   </div>
   <div class="card__bottom">

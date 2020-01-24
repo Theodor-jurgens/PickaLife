@@ -1,0 +1,24 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.experience-index{
+  &__banner{
+    border-radius: $border-radius;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    height: 50vh;
+    &__content{
+      width: 100%;
+      margin: 0 auto;
+      padding-top: $gutter-size *3;
+    }
+  }
+  &__title{
+    color: $white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: $gutter-size * 0.25;
+  }
+}

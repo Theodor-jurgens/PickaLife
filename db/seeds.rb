@@ -4,13 +4,13 @@ Experience.destroy_all
 User.destroy_all
 
 user1 = User.new(
-  name: "Jacky Jones",
+  name: "Jacky J. Louis",
   gender: "Male",
   age: 26,
   email: "jacky@gmail.com",
   password: "121212"
 )
-jacky = File.open("app/assets/images/users/jacky.png")
+jacky = File.open("app/assets/images/users/jacky.jpg")
 user1.photo.attach(io: jacky, filename: 'nes.png', content_type: 'image/png')
 user1.save!
 
@@ -18,8 +18,8 @@ experience1 = Experience.new(
   activity: "Surfing",
   place: "Rio",
   description: "I will be surfing in Rio de Janeiro next week, come take the wave with me!",
-  start_date: 2019-01-20,
-  end_date: 2019-01-20,
+  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   price: 20,
   user: User.last
 )
@@ -43,8 +43,8 @@ experience2 = Experience.new(
   activity: "Smoking",
   place: "Paris",
   description: "I will be smoking my last cigarette in the Parisian streets. Enjoy that one with me !",
-  start_date: 2019-01-20,
-  end_date: 2019-01-20,
+  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   price: 5,
   user: User.last
 )
@@ -67,8 +67,8 @@ experience3 = Experience.new(
   activity: "Running",
   place: "New York",
   description: "Come run NY20 Marathon with me, we will lose some weight together.",
-  start_date: 2019-01-20,
-  end_date: 2019-01-20,
+  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   price: 10,
   user: User.last
 )
@@ -91,8 +91,8 @@ experience4 = Experience.new(
   activity: "Shopping",
   place: "London",
   description: "Let's go big spenders in Oxford street together, gold card baby.",
-  start_date: 2019-01-20,
-  end_date: 2019-01-20,
+  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   price: 50,
   user: User.last
 )

@@ -1,43 +1,23 @@
-<%= render 'shared/searchbar', experience: @experience %>
-
-
-
-<% @experiences.each do |experience| %>
-
-<div class="card">
- <div class="row">
-
-  <div class="">
-<%= link_to experience_path(experience) do %>
-   <%= cl_image_tag experience.photo, height: 300, width: 400, crop: :fill %>
-<% end %>
-
-  </div>
-
-  <div class="">
-
-        <div class="card__title">
-          <%= experience.activity %>
+<div class="wrapper">
+  <div class="container mt-5 mb-4">
+    <div class="experience-index__banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1008&q=80);">
+    <div class="row">
+      <div class="col-6 offset-3 experience-index__banner__content">
+        <div class="experience-index__title">Where would you like to <span class="secondary-color">head</span>?
         </div>
-
-      <div class="card__place">
-        <%= experience.place %>
+        <%= render 'shared/searchbar', experience: @experience %>
       </div>
-      <div class="card__activity">
-        <%= experience.activity %>
-      </div>
-      <div class="card__price">
-        <%= experience.price %>,00€
-      </div>
-      <div class="card__description">
-          <%= experience.description %>
-        </div>
-      <div class="card__rating">
-        <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
-        4.9<span class="soft-text">(293)</span>
-      </div>
-      <%= link_to "Book now", new_experience_booking_path(experience), class: "card__cta" %>
+    </div>
+    </div>
   </div>
-<% end %>
-
-
+  <div class="container mb-4">
+    <%= render 'shared/titleSubtitle', title: 'Live your dreams', subtitle: 'Travel to the other part of the world in just a few ', subtitle_important: 'clicks' %>
+    <div class="row mb-4">
+      <% @experiences.each do |experience| %>
+      <div class="col-xs-6 col-sm-3 my-2">
+        <%= render 'shared/card', experience: experience %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

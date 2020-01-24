@@ -95,3 +95,10 @@ address {
 i{
   margin-right: $gutter-size * 0.20;
 }
+
+textarea:focus, input:focus{
+    outline: none;
+}
+*:focus {
+    outline: none;
+}

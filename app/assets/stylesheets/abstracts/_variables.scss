@@ -2,22 +2,31 @@
 $container: 1200px;
 // Value for padding col- and row
 $gutter-size: 32px;
+// base width
+$base-width: 600px;
+
 
 //Fonts
 $font-regular : 'Oswald';
 $font-secondary : 'Anton';
 
 // Font Sizes
+$paragraph-font-size: 14px;
 $base-font-size: 16px;
 $navbar-font-size: 16px;
 $logo-font-size: 20px;
-$main-title-font-size: 32px;
-$title-font-size: 24px;
 $subtitle-font-size: 20px;
+$title-font-size: 24px;
+$main-title-font-size: 32px;
+$big-title-font-size: 56px;
 
 // Line height
 $base-line-height: normal;
 $heading-line-height: normal;
+
+$hover-opacity: 0.95;
+$border-radius: 6px;
+
 
 //Colors
 $gold:                      #EFAD1E;
@@ -33,7 +42,7 @@ $green:                     #13B686;
 $white:                     #ffffff;
 $white-2:                   rgba(242, 242, 242, 0.95);
 $light-grey:                #d2d3d7;
-$grey:                      #9b9eaa;
+$grey:                      #6c757d;
 $dark-grey:                 #686e80;
 $black:                     #001835;
 $orange:                    #ec5334;
@@ -41,7 +50,7 @@ $orange:                    #ec5334;
 $body-bg-color:             $white;
 $transparent-bg-color:      $white-2;
 $text-color:                $black;
-$soft-text-color:           $light-grey;
+$soft-text-color:           $grey;
 $primary-color:             $white;
 $secondary-color:           $orange;
 $light-color:               $light-blue;

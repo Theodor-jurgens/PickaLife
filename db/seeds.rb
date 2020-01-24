@@ -1,3 +1,8 @@
+require "open-uri"
+
+Experience.destroy_all
+User.destroy_all
+
 user = User.new(
   name: "Julien Bisagni",
   gender: "Male",
@@ -7,6 +12,7 @@ user = User.new(
 )
 user.save!
 
+
 experience1 = Experience.new(
   activity: "Surfing",
   place: "Rio",
@@ -14,9 +20,11 @@ experience1 = Experience.new(
   start_date: 2019-01-20,
   end_date: 2019-01-20,
   price: 20,
-  photo: "https://images.unsplash.com/photo-1500520198921-6d4704f98092?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80",
   user: User.first
 )
+
+file1 = File.open("app/assets/images/backgrounds/surfing.jpeg")
+experience1.photo.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 experience1.save!
 
 experience2 = Experience.new(
@@ -26,9 +34,10 @@ experience2 = Experience.new(
   start_date: 2019-01-20,
   end_date: 2019-01-20,
   price: 5,
-  photo: "https://images.unsplash.com/photo-1566159549726-435f258cf4e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   user: User.first
 )
+file2 = File.open("app/assets/images/backgrounds/smoking.jpeg")
+experience2.photo.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
 experience2.save!
 
 experience3 = Experience.new(
@@ -38,9 +47,10 @@ experience3 = Experience.new(
   start_date: 2019-01-20,
   end_date: 2019-01-20,
   price: 10,
-  photo: "https://images.unsplash.com/photo-1524646349956-1590eacfa324?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
   user: User.first
 )
+file3 = File.open("app/assets/images/backgrounds/running.jpeg")
+experience3.photo.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
 experience3.save!
 
 experience4 = Experience.new(
@@ -50,7 +60,8 @@ experience4 = Experience.new(
   start_date: 2019-01-20,
   end_date: 2019-01-20,
   price: 50,
-  photo: "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   user: User.first
 )
+file4 = File.open("app/assets/images/backgrounds/shopping.jpeg")
+experience4.photo.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
 experience4.save!

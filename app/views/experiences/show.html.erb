@@ -1,46 +1,53 @@
-
-<div class="row">
-
-  <div class="">
-
-    <%= cl_image_tag @experience.photo, height: 300, width: 400, crop: :fill %>
-
-  </div>
-
-  <div class="">
-
-        <div class="card__title">
-          <%= @experience.activity %>
+<div class="wrapper">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="banner -search -show" style="background-image: url('<%= cl_image_path @experience.photo.key %>')");">
+          <div class="banner__title"><%= @experience.activity %> in <span class="secondary-color"><%= @experience.place %></span>.</div>
         </div>
-
-      <div class="card__place">
-        <%= @experience.place %>
       </div>
-      <div class="card__activity">
-        <%= @experience.activity %>
-      </div>
-      <div class="card__price">
-        <%= @experience.price %>,00€
-      </div>
-      <div class="card__description">
-          <%= @experience.description %>
+    </div>
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="experience">
+          <%= link_to root_path, class: 'experience__back' do %>
+          <%= icon('fas', 'arrow-left') %> Back to
+          experiences
+          <% end %>
+          <div>
+            <%= link_to edit_experience_path(@experience), class: 'experience__setting' do %>
+            <%= icon('fas', 'edit') %>
+            <% end %>
+            <%= link_to experience_path(@experience), method: :delete, data: { confirm: "Are you sure?" }, class: 'experience__setting' do %>
+            <%= icon('fas', 'trash-alt') %>
+            <% end %>
+          </div>
         </div>
-      <div class="card__rating">
-        <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
-        4.9<span class="soft-text">(293)</span>
       </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-5">
+        <%= render 'shared/titleSubtitle', title: 'The host', subtitle: 'Discover who you are going to live the experience ', subtitle_important: 'with' %>
+        <div class="experience__host">
+          <%= image_tag("https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60", class: "experience__host__avatar") %>
+          <div class="experience__host_details">
+            <h3 class="experience__host__name"><%= @experience.user.name %></h3>
+            <h4 class="experience__host__place"><%= @experience.place %></h4>
+            <h3 class="experience__description">"<%= @experience.description %>"</h3>
+            <%= render 'bookings/partials/form', experience: @experience %>
+          </div>
+        </div>
+      </div>
+      <div class="col-5 offset-2">
+          <%= image_tag("https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60", class: "experience__host__avatar") %>
+          <div class="experience__host_details">
+            <h3 class="experience__host__name"><%= @experience.user.name %></h3>
+            <h4 class="experience__host__place"><%= @experience.place %></h4>
+            <h3 class="experience__description">"<%= @experience.description %>"</h3>
+            <%= render 'bookings/partials/form', experience: @experience %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-
 </div>
-
-<div class="links btn-group">
-
-     <%= link_to "Back", root_path, class: "btn button-primary" %>
-      <%= link_to "Edit", edit_experience_path(@experience), class: "btn button-primary" %>
-      <%= link_to "Delete", experience_path(@experience), method: :delete, data: { confirm: "Are you sure?" }, class: "btn button-primary" %>
-      <%= link_to "Book now", new_experience_booking_path(@experience), class: "btn button-primary" %>
-
-
-</div>
-

@@ -1,43 +1,31 @@
 <div class="card">
- <div class="row">
-  <div class="card_img">
-    <%= link_to experience_path(experience) do %>
-      <%= cl_image_tag experience.photo, height: 300, width: 400, crop: :fill %>
-    <% end %>
-  </div>
-
-  <div class="">
+  <%= link_to experience_path(experience) do %>
+  <div class="card__img" style="background-image: url('<%= cl_image_path experience.photo.key %>')">
     <div class="card__title">
-      <%= link_to experience_path(experience) do %>
-        <%= experience.activity %>
-      <% end %>
+      <%= experience.activity %>
     </div>
-
-      <div class="card__place">
-        <%= experience.place %>
-      </div>
-      <div class="card__activity">
-      </div>
-      <div class="card__price">
-        <%= experience.price %>,00€
-      </div>
-      <div class="card__description">
-          <%= experience.description %>
-        </div>
-        <div class="card__date">
-          <%= experience.start_date %>
-        </div>
-       <div class="card__date">
-           <%= experience.end_date %>
-        </div>
-      <div class="card__rating">
-        <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
-        4.9<span class="soft-text">(293)</span>
-      </div>
   </div>
-
-
-</div>
-  <%= link_to "Book now", new_experience_booking_path(experience), class: "card__cta" %>
-  <%= link_to "Manage my bookings", experience_bookings_path(experience), class: "card__cta" %>
+  <% end %>
+  <div>
+    <div class="card__place">
+      <%= experience.place %>
+    </div>
+    <div class="card__price">
+      <%= experience.price %>,00€
+    </div>
+    <div class="card__description">
+      <%= experience.description %>
+    </div>
+    <div class="card__date">
+      <%= experience.start_date %>
+    </div>
+    <div class="card__date">
+      <%= experience.end_date %>
+    </div>
+    <div class="card__rating">
+      <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
+      4.9<span class="soft-text">(293)</span>
+    </div>
+  </div>
+  <%= link_to "Book now", experience_path(experience), class: "card__cta" %>
 </div>

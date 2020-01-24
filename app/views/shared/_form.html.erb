@@ -1,0 +1,32 @@
+<div class="form ">
+  <%= simple_form_for experience, html: { class: "form__card"} do |f| %>
+  <h2 class="form__title">Share your life experiences and make people's dreams come <span class="secondary-color">true.</span></h2>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-6">
+        <div class="form__column">
+          <%= f.input :activity, placeholder: 'Hiking' %>
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_date, as: :date, html5: true %>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form__column">
+          <%= f.input :description, placeholder: 'Climb the Machu Picchu', :input_html => {:rows => 1} %>
+          <%= f.input :price, placeholder: '10,00' %>
+          <%= f.input :place, placeholder: 'Machu Picchu, Peru' %>
+          <% if current_user%>
+              <%= f.association :user, :as => :hidden, :input_html => { :value => current_user.id }  %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <%= f.input :photo, label: 'Upload your image here'%>
+      </div>
+    </div>
+    <%= f.submit :class => 'btn -primary -full' %>
+  </div>
+  <% end %>
+</div>

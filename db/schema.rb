@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 2020_01_21_082534) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
     t.text "description"
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end

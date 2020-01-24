@@ -10,7 +10,7 @@
     <div class="card__place">
       <%= experience.place %>
       <div class="card__date">
-        <%= experience.start_date %>
+        <%= experience.start_date.strftime("on %a. %d of %B") %>
       </div>
     </div>
     <div class="card__price">

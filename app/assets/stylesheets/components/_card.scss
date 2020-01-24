@@ -37,6 +37,8 @@
   &__place{
     margin-bottom: $gutter-size/6;
     @include typography($color: $soft-text-color, $font-weight: 400);
+    display: flex;
+    justify-content: space-between;
   }
   &__description{
     font-size: $paragraph-font-size;

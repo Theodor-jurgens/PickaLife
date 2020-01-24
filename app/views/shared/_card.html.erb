@@ -6,7 +6,7 @@
     </div>
   </div>
   <% end %>
-  <div>
+  <div class="card__info">
     <div class="card__place">
       <%= experience.place %>
     </div>
@@ -27,5 +27,7 @@
       4.9<span class="soft-text">(293)</span>
     </div>
   </div>
-  <%= link_to "Book now", experience_path(experience), class: "card__cta" %>
+  <div class="card__bottom">
+    <%= link_to "Live it", experience_path(experience), class: "card__cta" %>
+  </div>
 </div>

@@ -1,0 +1,14 @@
+<div class="experience__host">
+  <div class="experience__host_details">
+    <div class="experience__host__photo">
+      <div class="experience__host__avatar" style="background-image: url('<%= cl_image_path experience.user.photo.key %>')">
+      </div>
+      <div class="">
+        <h3 class="experience__host__name"><%= experience.user.name %></h3>
+        <h4 class="experience__host__place"><%= experience.place %>, <%= experience.user.gender %>, <%= experience.user.age %> years old.</h4>
+      </div>
+    </div>
+    <h3 class="experience__description">"<%= experience.description %>"</h3>
+    <%= render 'bookings/partials/form', experience: experience %>
+  </div>
+</div>

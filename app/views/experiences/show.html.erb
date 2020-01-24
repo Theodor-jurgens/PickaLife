@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-12">
         <div class="banner -search -show" style="background-image: url('<%= cl_image_path @experience.photo.key %>')");">
-          <div class="banner__title"><%= @experience.activity %> in <span class="secondary-color"><%= @experience.place %></span>.</div>
+          <div class="banner__title"><%= @experience.activity %> in <span class="secondary-color"><%= @experience.place %></span>.
+          </div>
         </div>
       </div>
     </div>
@@ -27,26 +28,11 @@
     </div>
     <div class="row mb-3">
       <div class="col-5">
-        <%= render 'shared/titleSubtitle', title: 'The host', subtitle: 'Discover who you are going to live the experience ', subtitle_important: 'with' %>
-        <div class="experience__host">
-          <%= image_tag("https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60", class: "experience__host__avatar") %>
-          <div class="experience__host_details">
-            <h3 class="experience__host__name"><%= @experience.user.name %></h3>
-            <h4 class="experience__host__place"><%= @experience.place %></h4>
-            <h3 class="experience__description">"<%= @experience.description %>"</h3>
-            <%= render 'bookings/partials/form', experience: @experience %>
-          </div>
-        </div>
+        <%= render 'shared/titleSubtitle', title: 'The host', subtitle: 'Discover who is your next favorite ', subtitle_important: 'Pickalifer' %>
+        <%= render 'shared/userCard', experience: @experience %>
       </div>
       <div class="col-5 offset-2">
-          <%= image_tag("https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60", class: "experience__host__avatar") %>
-          <div class="experience__host_details">
-            <h3 class="experience__host__name"><%= @experience.user.name %></h3>
-            <h4 class="experience__host__place"><%= @experience.place %></h4>
-            <h3 class="experience__description">"<%= @experience.description %>"</h3>
-            <%= render 'bookings/partials/form', experience: @experience %>
-          </div>
-        </div>
+        TEST
       </div>
     </div>
   </div>

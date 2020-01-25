@@ -32,7 +32,13 @@
         <%= render 'shared/userCard', experience: @experience %>
       </div>
       <div class="col-5 offset-2">
-        TEST
+        <%= link_to 'create a review', new_experience_review_path(@experience.id), class: 'btn' %>
+        <div>
+          <% @reviews.each do |review| %>
+            <div> Rating:<%= review.rating %></div>
+            <div> <%= review.comment %></div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

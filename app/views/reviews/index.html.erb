@@ -1,0 +1,6 @@
+<div>
+  <% @reviews.each do |review| %>
+    <div> Rating:<%= review.rating %></div>
+    <div> <%= review.comment %></div>
+  <% end %>
+</div>

@@ -9,6 +9,6 @@
       </div>
     </div>
     <h3 class="experience__description">"<%= experience.description %>"</h3>
-    <%= render 'bookings/partials/form', experience: experience %>
+    <%= link_to 'Book now', new_experience_booking_path(experience.id),class: "btn -primary -full"%>
   </div>
 </div>

@@ -1,0 +1,12 @@
+<div>
+    <div> Rating:<%= @review.rating %></div>
+    <div> <%= @review.comment %></div>
+    <div>
+            <%= link_to experience_review_path(@review), class: 'experience__setting' do %>
+            <%= icon('fas', 'edit') %>
+            <% end %>
+            <%= link_to experience_review_path(@review), method: :delete, data: { confirm: "Are you sure?" }, class: 'experience__setting' do %>
+            <%= icon('fas', 'trash-alt') %>
+            <% end %>
+   </div>
+</div>

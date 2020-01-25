@@ -1,3 +1,3 @@
 <%= simple_form_for([experience, Booking.new]) do |f| %>
-   <%= link_to"LIVE THE EXPERIENCE", new_experience_booking(experience),  data: { confirm: "Do you confirm?"}, class: "btn -primary -full" %>
+   <%= link_to"LIVE THE EXPERIENCE", new_experience_booking_path(experience),  data: { confirm: "Do you confirm?"}, class: "btn -primary -full" %>
 <% end %>

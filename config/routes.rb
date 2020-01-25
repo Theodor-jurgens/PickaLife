@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: [:destroy]
+
+  resources :experiences do
+    resources :reviews
+  end
 end

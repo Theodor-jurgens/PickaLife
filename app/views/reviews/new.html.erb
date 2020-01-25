@@ -1,0 +1,6 @@
+
+<%= simple_form_for([@experience, Review.new]) do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.button 'submit', class: 'btn -primary -full'%>
+<% end %>

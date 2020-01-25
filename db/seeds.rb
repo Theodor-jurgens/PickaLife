@@ -21,7 +21,7 @@ experience1 = Experience.new(
   price: 20,
   user: User.last
 )
-file1 = File.open("app/assets/images/backgrounds/surfing.jpeg")
+file1 = File.open("app/assets/images/backgrounds/surfing.jpg")
 experience1.photo.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 experience1.save!
 
@@ -34,7 +34,7 @@ experience5 = Experience.new(
   price: 50,
   user: User.last
 )
-file5 = File.open("app/assets/images/backgrounds/base.jpeg")
+file5 = File.open("app/assets/images/backgrounds/base.jpg")
 experience5.photo.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 experience5.save!
 
@@ -47,7 +47,7 @@ experience6 = Experience.new(
   price: 75,
   user: User.last
 )
-file6 = File.open("app/assets/images/backgrounds/poker.jpeg")
+file6 = File.open("app/assets/images/backgrounds/poker.jpg")
 experience6.photo.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 experience6.save!
 user2 = User.new(
@@ -57,7 +57,7 @@ user2 = User.new(
   email: "pj@gmail.com",
   password: "121212"
 )
-pj = File.open("app/assets/images/users/pierre-jean.jpeg")
+pj = File.open("app/assets/images/users/pierre-jean.jpg")
 user2.photo.attach(io: pj, filename: 'nes.png', content_type: 'image/png')
 user2.save!
 
@@ -70,7 +70,7 @@ experience2 = Experience.new(
   price: 5,
   user: User.last
 )
-file2 = File.open("app/assets/images/backgrounds/smoking.jpeg")
+file2 = File.open("app/assets/images/backgrounds/smoking.jpg")
 experience2.photo.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
 experience2.save!
 
@@ -83,7 +83,7 @@ experience7 = Experience.new(
   price: 45,
   user: User.last
 )
-file7 = File.open("app/assets/images/backgrounds/diving.jpeg")
+file7 = File.open("app/assets/images/backgrounds/diving.jpg")
 experience7.photo.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 experience7.save!
 user5 = User.new(
@@ -93,7 +93,7 @@ user5 = User.new(
   email: "romain@gmail.com",
   password: "121212"
 )
-romain = File.open("app/assets/images/users/romain.jpeg")
+romain = File.open("app/assets/images/users/romain.jpg")
 user5.photo.attach(io: romain, filename: 'nes.png', content_type: 'image/png')
 user5.save!
 experience8 = Experience.new(
@@ -105,7 +105,7 @@ experience8 = Experience.new(
   price: 45,
   user: User.last
 )
-file8 = File.open("app/assets/images/backgrounds/prom.jpeg")
+file8 = File.open("app/assets/images/backgrounds/prom.jpg")
 experience8.photo.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
 experience8.save
 
@@ -118,7 +118,7 @@ experience9 = Experience.new(
   price: 10,
   user: User.last
 )
-file9 = File.open("app/assets/images/backgrounds/pong.jpeg")
+file9 = File.open("app/assets/images/backgrounds/pong.jpg")
 experience9.photo.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
 experience9.save
 
@@ -129,22 +129,9 @@ user3 = User.new(
   email: "alva@gmail.com",
   password: "121212"
 )
-alvaro = File.open("app/assets/images/users/alvaro.jpeg")
+alvaro = File.open("app/assets/images/users/alvaro.jpg")
 user3.photo.attach(io: alvaro, filename: 'nes.png', content_type: 'image/png')
 user3.save!
-
-experience3 = Experience.new(
-  activity: "Running",
-  place: "New York",
-  description: "Come run NY20 Marathon with me, we will lose some weight together.",
-  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
-  end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
-  price: 10,
-  user: User.last
-)
-file3 = File.open("app/assets/images/backgrounds/running.jpeg")
-experience3.photo.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-experience3.save!
 
 experience10 = Experience.new(
   activity: "Strike",
@@ -155,9 +142,23 @@ experience10 = Experience.new(
   price: 5,
   user: User.last
 )
-file10 = File.open("app/assets/images/backgrounds/strike.jpeg")
+file10 = File.open("app/assets/images/backgrounds/strike.jpg")
 experience10.photo.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
 experience10.save!
+
+experience3 = Experience.new(
+  activity: "Running",
+  place: "New York",
+  description: "Come run NY20 Marathon with me, we will lose some weight together.",
+  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  price: 10,
+  user: User.last
+)
+file3 = File.open("app/assets/images/backgrounds/running.jpg")
+experience3.photo.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+experience3.save!
+
 
 user4 = User.new(
   name: "Yanan Dh",
@@ -166,7 +167,7 @@ user4 = User.new(
   email: "yaya@gmail.com",
   password: "121212"
 )
-yanan = File.open("app/assets/images/users/yanan.jpeg")
+yanan = File.open("app/assets/images/users/yanan.jpg")
 user4.photo.attach(io: yanan, filename: 'nes.png', content_type: 'image/png')
 user4.save!
 
@@ -179,7 +180,7 @@ experience4 = Experience.new(
   price: 50,
   user: User.last
 )
-file4 = File.open("app/assets/images/backgrounds/shopping.jpeg")
+file4 = File.open("app/assets/images/backgrounds/shopping.jpg")
 experience4.photo.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
 experience4.save!
 
@@ -192,7 +193,7 @@ experience11 = Experience.new(
   price: 2,
   user: User.last
 )
-file11 = File.open("app/assets/images/backgrounds/hangover.jpeg")
+file11 = File.open("app/assets/images/backgrounds/hangover.jpg")
 experience11.photo.attach(io: file11, filename: 'nes.png', content_type: 'image/png')
 experience11.save!
 
@@ -205,7 +206,7 @@ experience12 = Experience.new(
   price: 10,
   user: User.last
 )
-file12 = File.open("app/assets/images/backgrounds/riding.jpeg")
+file12 = File.open("app/assets/images/backgrounds/riding.jpg")
 experience12.photo.attach(io: file12, filename: 'nes.png', content_type: 'image/png')
 experience12.save!
 

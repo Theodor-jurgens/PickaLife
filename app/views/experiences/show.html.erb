@@ -11,7 +11,7 @@
     <div class="row mb-5">
       <div class="col-12">
         <div class="experience">
-          <%= link_to root_path, class: 'experience__back' do %>
+          <%= link_to experiences_path, class: 'experience__back' do %>
           <%= icon('fas', 'arrow-left') %> Back to
           experiences
           <% end %>
@@ -26,13 +26,22 @@
         </div>
       </div>
     </div>
-    <div class="row mb-3">
+    <div class="row mb-5">
       <div class="col-5">
         <%= render 'shared/titleSubtitle', title: 'The host', subtitle: 'Discover who is your next favorite ', subtitle_important: 'Pickalifer' %>
         <%= render 'shared/userCard', experience: @experience %>
       </div>
       <div class="col-5 offset-2">
-        TEST
+      </div>
+    </div>
+    <div class="wrapper">
+      <%= render 'shared/titleSubtitle', title: 'You might also like', subtitle: 'The experiences you do not want to ', subtitle_important: 'miss' %>
+      <div class="row mb-4">
+        <% @experiences.each do |experience| %>
+        <div class="col-xs-6 col-sm-3 my-2">
+          <%= render 'shared/card', experience: experience %>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>

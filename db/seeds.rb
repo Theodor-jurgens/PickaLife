@@ -19,7 +19,7 @@ experience1 = Experience.new(
   place: "Rio de Janeiro",
   address: "Av. Gomes Freire, Rio de Janeiro - RJ, 20231-014, Brazil",
   description: "I will be surfing in Rio de Janeiro next week, come take the wave with me!",
-  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  start_date: DateTime.strptime('30/01/20', "%d/%m/%Y"),
   end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   price: 40,
   user: User.last
@@ -45,7 +45,7 @@ experience2 = Experience.new(
   place: "Paris",
   address: "16 Villa Gaudelet, Paris",
   description: "I will be smoking my last cigarette in the Parisian streets. Enjoy that one with me !",
-  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  start_date: DateTime.strptime('28/01/20', "%d/%m/%Y"),
   end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   price: 1,
   user: User.last
@@ -70,7 +70,7 @@ experience3 = Experience.new(
   place: "New York",
   address: "141 Macon St Brooklyn, NY 11216, USA",
   description: "Come run NY20 Marathon with me, we will lose some weight together.",
-  start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
+  start_date: DateTime.strptime('29/01/20', "%d/%m/%Y"),
   end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   price: 20,
   user: User.last
@@ -93,7 +93,7 @@ user4.save!
 experience4 = Experience.new(
   activity: "Shopping",
   place: "London",
-  address: "10-7 Marshall St, Carnaby, London W1F 7BE, UK",
+  address: "10 Marshall Street, London",
   description: "Let's go big spenders in Oxford street together, gold card baby.",
   start_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),
   end_date: DateTime.strptime('26/01/20', "%d/%m/%Y"),

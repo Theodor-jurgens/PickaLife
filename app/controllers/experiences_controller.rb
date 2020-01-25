@@ -9,19 +9,20 @@ class ExperiencesController < ApplicationController
     else
       @experiences = Experience.all
     end
-  end
 
-  def show
-    @experience = Experience.find(params[:id])
-    @experiences = Experience.all
-    @experiences = Experience.geocoded
+    @experiences_with_map = Experience.geocoded
 
-    @markers = @experiences.map do |experience|
+    @markers = @experiences_with_map.map do |experience|
       {
         lat: experience.latitude,
         lng: experience.longitude
       }
     end
+  end
+
+  def show
+    @experience = Experience.find(params[:id])
+    @experiences = Experience.all
   end
 
   def create

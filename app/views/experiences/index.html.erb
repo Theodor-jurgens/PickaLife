@@ -21,3 +21,11 @@
     </div>
   </div>
 </div>
+
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['pk.eyJ1IjoianVsaWVuYmlzYWduaSIsImEiOiJjazVzdTlqZTQwNjNrM2RsN25ld2JnMjM4In0.IvJi8unmfb6IGccWLpaYRQ'] %>"
+></div>

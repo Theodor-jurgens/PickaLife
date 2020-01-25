@@ -32,12 +32,25 @@
         <%= render 'shared/userCard', experience: @experience %>
       </div>
       <div class="col-5 offset-2">
-        <%= link_to 'create a review', new_experience_review_path(@experience.id), class: 'btn' %>
-        <div>
-          <% @reviews.each do |review| %>
-            <div> Rating:<%= review.rating %></div>
-            <div> <%= review.comment %></div>
-          <% end %>
+        <%= render 'shared/titleSubtitle', title: '', subtitle: 'What they say about ', subtitle_important: @experience.user.name %>
+        <div class="row">
+          <div class="col-12">
+            <% @experience.reviews.each do |review| %>
+            <div class="experience__host experience__host__review mb-3">
+              <div class="experience__host_details">
+                <div class="experience__host__photo experience__host__photo__review">
+                  <div class="experience__host__avatar" style="background-image: url('<%= cl_image_path review.user.photo.key %>')">
+                  </div>
+                  <div class="">
+                    <h3 class="experience__host__name"><%= review.user.name %></h3>
+                    <h4 class="experience__host__place"><%= review.user.experiences.first.place %>, <%= review.user.gender %>, <%= review.user.age %> years old.</h4>
+                  </div>
+                </div>
+                <h3 class="experience__description">"<%= review.comment %>"</h3>
+              </div>
+            </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

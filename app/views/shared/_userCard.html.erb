@@ -9,6 +9,6 @@
       </div>
     </div>
     <h3 class="experience__description">"<%= experience.description %>"</h3>
-    <%= link_to 'Book now', new_experience_booking_path(experience.id),class: "btn -primary -full"%>
+    <%= link_to 'LIVE THE EXPERIENCE', experience_bookings_path(experience), method: :post, data: { confirm: "Are you sure you want to book this experience?"}, class: "btn -primary -full"%>
   </div>
 </div>

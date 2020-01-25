@@ -21,11 +21,15 @@
     @include padding-vertical;
     @include padding-horizontal;
     background: $transparent-bg-color;
+    border-radius: $border-radius;
     display: flex;
     &__photo{
       display: flex;
       vertical-align: middle;
       align-items: flex-start;
+      &__review{
+        margin-bottom: $gutter-size * 0.5;
+      }
     }
     &__avatar{
       border-radius: $border-radius;
@@ -42,6 +46,9 @@
     &__place{
       @include typography($font-size: $base-font-size, $color: $text-color, $font-weight: 300);
       margin-bottom: $gutter-size;
+    }
+    &__review{
+      background-color: $secondary-color-transparent;
     }
   }
 }

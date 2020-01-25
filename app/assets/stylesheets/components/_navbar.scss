@@ -30,7 +30,7 @@
   @include border-shadow;
   display: flex;
   justify-content: space-between;
-  @include padding-horizontal;
+  @include padding-horizontal($gutter-size * 2);
   &__logo{
     color: $secondary-color;
     font-size: $logo-font-size;

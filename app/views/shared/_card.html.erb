@@ -17,11 +17,11 @@
       <%= experience.price %>,00€
     </div>
     <div class="card__description">
-      <%= experience.description %>
+      <%= experience.description.truncate(90) %>
     </div>
     <div class="card__rating">
       <span class="card__icon"><%= icon('fas', 'star', class: 'strong') %></span>
-      4.9<span class="soft-text"> (293)</span>
+      <%= rand(3.0..5).to_s.truncate(4, omission: '') %><span class="soft-text"> (293)</span>
     </div>
   </div>
   <div class="card__bottom">

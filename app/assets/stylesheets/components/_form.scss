@@ -16,6 +16,7 @@
 
 .experience_photo{
   label{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,8 +24,9 @@
     border: 1px dashed $border-color;
     padding: $gutter-size * 0.5;
     border-radius: $border-radius;
+    background: $primary-color;
     &:hover{
-      opacity: $hover-opacity;
+      opacity: 0.8;
     }
   }
   #experience_photo{

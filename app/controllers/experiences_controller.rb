@@ -13,13 +13,12 @@ class ExperiencesController < ApplicationController
 
   def show
     @experience = Experience.find(params[:id])
-    @reviews = Review.where(experience_id: @experience.id)
   end
 
   def create
     @experience = Experience.new(experience_params)
     @experience.save
-    redirect_to '/experiences'
+    redirect_to experience_path(@experience)
   end
 
   def new

@@ -46,6 +46,7 @@ $grey:                      #6c757d;
 $dark-grey:                 #686e80;
 $black:                     #001835;
 $orange:                    #ec5334;
+$orange-transparent:        rgba(245, 201, 176, 0.25);
 
 $body-bg-color:             $white;
 $transparent-bg-color:      $white-2;
@@ -53,6 +54,7 @@ $text-color:                $black;
 $soft-text-color:           $grey;
 $primary-color:             $white;
 $secondary-color:           $orange;
+$secondary-color-transparent: $orange-transparent;
 $light-color:               $light-blue;
 $valid-color:               $green;
 $invalid-color:             $red;

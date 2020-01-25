@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def new
@@ -11,8 +11,11 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.create(experience: Experience.find(params[:experience_id]), user: current_user)
-    redirect_to experience_path(@booking.experience)
+    @booking = Booking.create(
+      experience: Experience.find(params[:experience_id]),
+      user: current_user
+    )
+    redirect_to bookings_path
   end
 
 

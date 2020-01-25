@@ -11,7 +11,7 @@
   <div class="container mb-5">
     <%= render 'shared/titleSubtitle', title: 'Latests experiences', subtitle: 'The best life experiences you can find, ', subtitle_important: 'worldwide' %>
     <div class="row my-4">
-      <% @experiences[0..3].each do |experience| %>
+      <% @experiences.last(4).each do |experience| %>
       <div class="col-xs-6 col-sm-3 my-2">
         <%= render 'shared/card', experience: experience %>
       </div>
@@ -30,7 +30,7 @@
   <div class="container mb-5">
     <%= render 'shared/titleSubtitle', title: 'Top-rated experiences', subtitle: 'The best you can live ', subtitle_important: 'out there' %>
     <div class="row mb-4">
-      <% @experiences[0..3].each do |experience| %>
+      <% @experiences.sample(4).each do |experience|%>
       <div class="col-xs-4 col-sm-3 my-2">
         <%= render 'shared/card', experience: experience %>
       </div>
